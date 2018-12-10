@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
+    <!--<context:property-placeholder location="classpath*:application.properties" ignore-unresolvable="true"/>-->
+    <!--<bean id="loandbDataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close" primary="true">-->
+    <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+    <!---->
+    <!--<property naurlconfig"url" value="${spring.datasouurlconfig.url}"/>-->
+    <!--<property name="username" value="${spring.datasource.username}"/>-->
+    <!--<property name="password" value="${spring.datasource.password}"/>-->
+    <!---->
+    <!--<property name="initialSize" value="5"/>-->
+    <!--<property name="maxActive" value="20"/>-->
+    <!--<property name="maxIdle" value="10"/>-->
+    <!--<property name="maxWait" value="10000"/>-->
+    <!--<property name="testWhileIdle" value="true"/>-->
+    <!--<property name="validationQuery" value="select 1 from dual"/>-->
+    <!--<property name="validationInterval" value="30000"/>-->
+    <!--<property name="timeBetweenEvictionRunsMillis" value="10000"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="basisdataDataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close" primary="true">-->
+    <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+
+    <!--<property naurlconfig"url" value="${dashu.datasource.basisdurlconfig.url}"/>-->
+    <!--<property name="username" value="${dashu.datasource.basisdata.username}"/>-->
+    <!--<property name="password" value="${dashu.datasource.basisdata.password}"/>-->
+
+    <!--<property name="initialSize" value="5"/>-->
+    <!--<property name="maxActive" value="20"/>-->
+    <!--<property name="maxIdle" value="10"/>-->
+    <!--<property name="maxWait" value="10000"/>-->
+    <!--<property name="testWhileIdle" value="true"/>-->
+    <!--<property name="validationQuery" value="select 1 from dual"/>-->
+    <!--<property name="validationInterval" value="30000"/>-->
+    <!--<property name="timeBetweenEvictionRunsMillis" value="10000"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="dataSource" class="com.dashu.datatransfer.dbconfig.DynamicDataSource">-->
+    <!--<property name="defaultTargetDataSource" ref="loandbDataSource"/>&lt;!&ndash; 设置默认为此mySqlDataSource数据源&ndash;&gt;-->
+    <!--<property name="targetDataSources">-->
+    <!--<map>-->
+    <!--<entry key="loandb" value-ref="loandbDataSource"></entry>-->
+    <!--&lt;!&ndash;<entry key="basisdata" value-ref="basisdataDataSource"></entry>&ndash;&gt;-->
+    <!--</map>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;JDBC-Template&ndash;&gt;-->
+    <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource"></property>-->
+    <!--</bean>-->
+
+    <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource"></property>-->
+    <!--</bean>-->
+    <!--<bean id="transactionManagerLoandb" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+    <!--<property name="dataSource" ref="dataSourceLoandb"/>-->
+    <!--</bean>-->
+
+    <!--<tx:annotation-driven transaction-manager="transactionManagerLoandb"/>-->
+
+    <!--<bean id="sqlSessionFactoryLoandb" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+    <!--<property name="dataSource" ref="dataSourceLoandb"/>-->
+    <!--<property name="mapperLocations" value="classpath:sqlmap/loandb/**/*.xml"></property>-->
+    <!--</bean>-->
+
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+    <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryLoandb"/>-->
+    <!--<property name="basePackage" value="com.datatrees.basisdata.search.dao.mapper.loandb"/>-->
+    <!--</bean>-->
+</beans>
